@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">JOLI</string>
+    <string name="action_settings">Settings</string>
+    <string name="channel_manage">channel_manage</string>
+
+    <!-- 左边页面 -->
+    <string name="photo">photo</string>
+    <string name="video">video</string>
+    <string name="notification">notification</string>
+    <string name="weather">weather</string>
+    <string name="settings">settings</string>
+
+    <!-- 图片栏 -->
+    <string name="redian">redian</string>
+    <string name="dujia">dujia</string>
+    <string name="mingxing">make up</string>
+    <string name="titan">Fitness</string>
+    <string name="meitu">Beautiful picture</string>
+
+    <!-- 视频栏 -->
+    <string name="video_redian">hot spot</string>
+    <string name="video_yule">entertainment</string>
+    <string name="video_gaoxiao">Outfit</string>
+    <string name="video_jingpin">accessories</string>
+    <string name="news">news</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="title_activity_weather">WeatherActivity</string>
+
+
+    <string-array name="slide_mode_items">
+        <item>edge slipping</item>
+        <item>full page skid </item>
+    </string-array>
+
+    <!--定死不能更改的三个频道
+    <string-array name="fixed_news_channel">
+        <item>头条</item>
+        <item>体育</item>
+        <item>科技</item>
+    </string-array>
+    <string-array name="fixed_news_channel_id">
+        <item>T1348647909107</item>
+        <item>T1348649079062</item>
+        <item>T1348649580692</item>
+    </string-array>
+    新闻的可选频道-->
+    <string-array name="news_channel">
+
+        <!--定死不能更改的三个频道-->
+    <item> headline </item>
+             <item>sports</item>
+             <item>Tech </item>
+
+             <item>military</item>
+             <item>Finance</item>
+             <!--<item>Beijing</item>-->
+             <item>property </item>
+             <item> football </item>
+             <item>Entertainment</item>
+             <item> movie</item>
+             <item>car </item>
+             <item> joke </item>
+             <item>game</item>
+             <item>fashion</item>
+             <item>Emotion</item>
+             <item> featured</item>
+             <item>Radio</item>
+             <item>NBA</item>
+             <item>digital</item>
+             <item>mobile</item>
+             <item> lottery </item>
+             <item>education</item>
+             <item>Forum </item>
+             <item>Travel</item>
+             <item>Mobile</item>
+             <item>blog</item>
+             <item>social</item>
+             <item>home </item>
+             <item>blizzard</item>
+             <item>Parents</item>
+             <item>CBA</item>
+             <item> message </item>
+    </string-array>
+
+    <string-array name="news_channel_id">
+
+        <!--定死不能更改的三个频道ID-->
+        <item>T1348647909107</item>
+        <item>T1348649079062</item>
+        <item>T1348649580692</item>
+
+        <item>T1348648141035</item>
+        <item>T1348648756099</item>
+        <!--<item>5YyX5Lqs</item>-->
+        <item>5YyX5Lqs</item>
+        <item>T1399700447917</item>
+        <item>T1348648517839</item>
+        <item>T1348648650048</item>
+        <item>T1348654060988</item>
+        <item>T1350383429665</item>
+        <item>T1348654151579</item>
+        <item>T1348650593803</item>
+        <item>T1348650839000</item>
+        <item>T1370583240249</item>
+        <item>T1379038288239</item>
+        <item>T1348649145984</item>
+        <item>T1348649776727</item>
+        <item>T1351233117091</item>
+        <item>T1356600029035</item>
+        <item>T1348654225495</item>
+        <item>T1349837670307</item>
+        <item>T1348654204705</item>
+        <item>T1348649654285</item>
+        <item>T1349837698345</item>
+        <item>T1348648037603</item>
+        <item>T1348654105308</item>
+        <item>T1397016069906</item>
+        <item>T1397116135282</item>
+        <item>T1348649475931</item>
+        <item>T1371543208049</item>
+    </string-array>
+
+    <string name="news_detail">news_detail</string>
+    <string name="from">source: %1$s  %2$s</string>
+    <string name="title_activity_news_channel_manage">NewsChannelManageActivity</string>
+    <string name="news_channel_manage">channel_manage</string>
+    <string name="photo_detail">photo</string>
+    <string name="photo_page">%1$d/%2$d</string>
+    <string name="photo_detail_content">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;%1$s</string>
+    <string name="about_info"></string>
+
+    <string name="N_A">N/A</string>
+    <string name="close">Close</string>
+    <string name="exit">Exit</string>
+    <string name="sample">Sample</string>
+    <string name="recent">Recent</string>
+    <string name="tracks">Tracks</string>
+    <string name="toggle_player">Player</string>
+    <string name="toggle_render">Render</string>
+    <string name="toggle_ratio">Scale</string>
+    <string name="show_info">Info</string>
+    <string name="vdec">vdec</string>
+    <string name="fps">fps</string>
+    <string name="v_cache">v-cache</string>
+    <string name="a_cache">a-cache</string>
+
+    <string name="media_information">Media Information</string>
+    <string name="mi_player">Player</string>
+    <string name="mi_media">Media</string>
+    <string name="mi_profile_level">Profile level</string>
+    <string name="mi_pixel_format">Pixel format</string>
+    <string name="mi_resolution">Resolution</string>
+    <string name="mi_length">Length</string>
+    <string name="mi_stream_fmt1">Stream #%d</string>
+    <string name="mi_type">Type</string>
+    <string name="mi_language">Language</string>
+    <string name="mi_codec">Codec</string>
+    <string name="mi_frame_rate">Frame rate</string>
+    <string name="mi_bit_rate">Bit rate</string>
+    <string name="mi_sample_rate">Sample rate</string>
+    <string name="mi_channels">Channels</string>
+    <string name="mi__selected_video_track">*</string>
+    <string name="mi__selected_audio_track">*</string>
+
+    <string name="TrackType_video">Video</string>
+    <string name="TrackType_audio">Audio</string>
+    <string name="TrackType_subtitle">Subtitle</string>
+    <string name="TrackType_timedtext">Timed text</string>
+    <string name="TrackType_metadata">Meta data</string>
+    <string name="TrackType_unknown">Unknown</string>
+
+    <string name="VideoView_error_text_invalid_progressive_playback">Invalid progressive playback</string>
+    <string name="VideoView_error_text_unknown">Unknown</string>
+    <string name="VideoView_error_button">OK</string>
+
+    <string name="VideoView_ar_aspect_fit_parent">Aspect / Fit parent</string>
+    <string name="VideoView_ar_aspect_fill_parent">Aspect / Fill parent</string>
+    <string name="VideoView_ar_aspect_wrap_content">Aspect / Wrap content</string>
+    <string name="VideoView_ar_match_parent">Free / Fill parent</string>
+    <string name="VideoView_ar_16_9_fit_parent">16:9 / Fit parent</string>
+    <string name="VideoView_ar_4_3_fit_parent">4:3 / Fit parent</string>
+
+    <string name="VideoView_render_none">Render: None</string>
+    <string name="VideoView_render_surface_view">Render: SurfaceView</string>
+    <string name="VideoView_render_texture_view">Render: TextureView</string>
+
+    <string name="VideoView_player_none">Player: None</string>
+    <string name="VideoView_player_AndroidMediaPlayer">Player: AndroidMediaPlayer</string>
+    <string name="VideoView_player_IjkMediaPlayer">Player: IjkMediaPlayer</string>
+    <string name="VideoView_player_IjkExoMediaPlayer">Player: IjkExoMediaPlayer</string>
+
+
+</resources>
