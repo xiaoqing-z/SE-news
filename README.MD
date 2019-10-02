@@ -10,7 +10,7 @@ PROJECT PLAN
    | iteration1|news browse(untargted);watch the details of the news;video acquisition;channel management|
    | iteration2|user login;database construction;news screening(only for women)|
    | iteration3|setting;my favorite;channel management optimization|
-   |final deliverables|UI optimization;final test|
+   | final deliverables|UI optimization;final test|
 
 
 
