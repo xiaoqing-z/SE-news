@@ -1,6 +1,6 @@
 JOLI
 ======
-A news app named JOLI for women.
+A news app named JOLI for women.If you are a female, you can find anything what you want to know,such as gossip about star、how to become beatiful，etc.
 
 
 
