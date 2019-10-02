@@ -26,7 +26,6 @@ import com.women.JOLI.bean.SinaPhotoDetail;
 import com.women.JOLI.module.news.presenter.INewsDetailPresenter;
 import com.women.JOLI.module.news.presenter.INewsDetailPresenterImpl;
 import com.women.JOLI.module.news.view.INewsDetailView;
-//import com.oushangfeng.ounews.module.photo.ui.PhotoDetailActivity;
 import com.women.JOLI.module.video.ui.VideoPlayActivity;
 import com.women.JOLI.utils.GlideUtils;
 import com.women.JOLI.utils.MeasureUtil;
