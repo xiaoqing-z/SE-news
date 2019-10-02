@@ -33,8 +33,6 @@ import com.women.JOLI.annotation.ActivityFragmentInject;
 import com.women.JOLI.app.App;
 import com.women.JOLI.app.AppManager;
 import com.women.JOLI.module.news.ui.NewsActivity;
-//import com.oushangfeng.ounews.module.photo.ui.PhotoActivity;
-//import com.oushangfeng.ounews.module.settings.ui.SettingsActivity;
 import com.women.JOLI.module.video.ui.VideoActivity;
 import com.women.JOLI.utils.GlideCircleTransform;
 import com.women.JOLI.utils.GlideUtils;
