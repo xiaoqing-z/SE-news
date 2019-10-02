@@ -8,7 +8,7 @@ public class Daogenerator {
 
     public static void main(String[] args) throws Exception {
         int version = 1;
-        String defaultJavaPackage = "com.oushangfeng.ounews.greendao";
+        String defaultJavaPackage = "com.women.JOLI.greendao";
         Schema schema = new Schema(version, defaultJavaPackage);
         addTable(schema);
         // /表示根目录， ./表示当前路径， ../表示上一级父目录
