@@ -46,7 +46,7 @@ android {
                         ".apk"
             }
 //            variant.outputs.each { output ->
-//                def appName = 'OuNews'
+//                def appName = 'JOLI'
 //                def oldFile = output.outputFile
 //                def buildName = ''
 //
