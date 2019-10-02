@@ -16,14 +16,7 @@ import com.zhy.changeskin.SkinManager;
 
 import de.greenrobot.dao.query.QueryBuilder;
 
-/**
- * ClassName: App<p>
- * Author:oubowu<p>
- * Fuction: Application<p>
- * CreateDate:2016/2/16 1:25<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
+
 public class App extends Application {
 
     private RefWatcher mRefWatcher;

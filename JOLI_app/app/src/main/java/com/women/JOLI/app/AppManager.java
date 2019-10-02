@@ -4,16 +4,7 @@ import android.util.SparseArray;
 
 import com.socks.library.KLog;
 
-/**
- * ClassName: AppManager<p>
- * Author: oubowu<p>
- * Fuction:  管理主页面几个导航Activity的排序，由于跳转导航的Activity时设置了此标志位FLAG_ACTIVITY_REORDER_TO_FRONT，
- * 跳转的Activity若在栈中有实例会顶到栈顶，NewsActivity作为整个app结束的页面，需要这里管理导航的Activity的排序，
- * 按返回键的时候不是结束导航Activity而是跳转上一个导航Activity<p>
- * CreateDate: 2016/2/17 14:26<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
+
 public class AppManager {
 
     private static volatile AppManager sInstance;
