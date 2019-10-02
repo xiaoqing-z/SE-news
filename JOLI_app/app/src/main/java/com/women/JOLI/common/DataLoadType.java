@@ -5,14 +5,7 @@ import android.support.annotation.IntDef;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-/**
- * ClassName: DataLoadType<p>
- * Author: oubowu<p>
- * Fuction: 数据加载结果的类型<p>
- * CreateDate: 2016/2/21 17:33<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
+
 public class DataLoadType {
 
     /**
