@@ -46,14 +46,6 @@ import com.socks.library.KLog;
 import rx.Observable;
 import rx.functions.Action1;
 
-/**
- * ClassName: BaseActivity<p>
- * Author:oubowu<p>
- * Fuction: Activity的基类<p>
- * CreateDate:2016/2/14 18:42<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public abstract class BaseActivity<T extends BasePresenter> extends AppCompatActivity implements View.OnClickListener, BaseView {
 
     /**
