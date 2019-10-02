@@ -1,13 +1,6 @@
 package com.women.JOLI.http;
 
-/**
- * ClassName: NewsApi<p>
- * Author:oubowu<p>
- * Fuction: 请求接口<p>
- * CreateDate:2016/2/13 19:10<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
+
 public class Api {
 
     public static final String NETEAST_HOST = "https://c.m.163.com/";
@@ -20,11 +13,6 @@ public class Api {
     // 头条
     public static final String HEADLINE_TYPE = "headline";
     public static final String HEADLINE_ID = "T1348647909107";
-
-    //    // 北京
-    //    public static final String LOCAL_TYPE = "local";
-    //    // 北京的Id
-    //    public static final String BEIJING_ID = "5YyX5Lqs";
 
     // 房产
     public static final String HOUSE_TYPE = "house";
@@ -117,14 +105,6 @@ public class Api {
      */
     public static final String SINA_PHOTO_HOST = "http://api.sina.cn/sinago/";
 
-    // 精选列表
-    public static final String SINA_PHOTO_CHOICE_ID = "hdpic_toutiao";
-    // 趣图列表
-    public static final String SINAD_PHOTO_FUN_ID = "hdpic_funny";
-    // 美图列表
-    public static final String SINAD_PHOTO_PRETTY_ID = "hdpic_pretty";
-    // 故事列表
-    public static final String SINA_PHOTO_STORY_ID = "hdpic_story";
 
     // 图片详情
     public static final String SINA_PHOTO_DETAIL_ID = "hdpic_hdpic_toutiao_4";
@@ -147,10 +127,6 @@ public class Api {
     }
 
     /**
-     * 获取对应的host
-     *
-     * @param hostType host类型
-     * @return host
      */
     public static String getHost(int hostType) {
         switch (hostType) {
