@@ -1,6 +1,8 @@
+#JOLI
+===========
 A news app named JOLI for women.
 
-ENVIRONMENT
+##ENVIRONMENT
 ===========
    JAVA<br>
    Android Studio<br>
