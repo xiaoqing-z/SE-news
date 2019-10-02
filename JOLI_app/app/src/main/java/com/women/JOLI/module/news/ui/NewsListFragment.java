@@ -27,7 +27,6 @@ import com.women.JOLI.common.DataLoadType;
 import com.women.JOLI.module.news.presenter.INewsListPresenter;
 import com.women.JOLI.module.news.presenter.INewsListPresenterImpl;
 import com.women.JOLI.module.news.view.INewsListView;
-//import com.oushangfeng.ounews.module.photo.ui.PhotoDetailActivity;
 import com.women.JOLI.utils.ClickUtils;
 import com.women.JOLI.utils.GlideUtils;
 import com.women.JOLI.utils.MeasureUtil;
@@ -38,14 +37,6 @@ import com.socks.library.KLog;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * ClassName: NewsListFragment<p>
- * Author: oubowu<p>
- * Fuction: 新闻列表界面<p>
- * CreateDate: 2016/2/17 20:50<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 @ActivityFragmentInject(contentViewId = R.layout.fragment_news_list,
         handleRefreshLayout = true)
 public class NewsListFragment extends BaseFragment<INewsListPresenter> implements INewsListView {
