@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background_color_night"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".module.video.ui.VideoPlayActivity">
+
+    <com.women.JOLI.utils.ijkplayer.widget.media.IjkVideoView
+        android:id="@+id/ijk_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.women.JOLI.widget.ThreePointLoadingView
+        android:id="@+id/tpl_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="@color/background_color_night"
+        app:pointColor="?attr/pointColor"/>
+
+</RelativeLayout>
