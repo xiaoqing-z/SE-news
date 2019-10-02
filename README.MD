@@ -1,15 +1,15 @@
 JOLI
 ======
 A news app named JOLI for women.
-<br>
+
 
 
 DEVELOPER
 --------
-   XIAOQING ZHANG
-   ZIZHEN LI
-   YUJIA SHI
-<br>
+   XIAOQING ZHANG<br>
+   ZIZHEN LI<br>
+   YUJIA SHI<br>
+
 
 ENVIRONMENT
 ---------
