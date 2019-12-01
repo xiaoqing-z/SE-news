@@ -2,9 +2,6 @@ package com.oubowu.slideback;
 
 import android.support.annotation.FloatRange;
 
-/**
- * Created by Oubowu on 2016/9/22 23:37.
- */
 public class SlideConfig {
 
     private boolean mEdgeOnly;

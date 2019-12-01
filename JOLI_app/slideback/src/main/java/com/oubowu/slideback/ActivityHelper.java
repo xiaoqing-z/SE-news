@@ -7,9 +7,6 @@ import android.util.Log;
 
 import java.util.Stack;
 
-/**
- * Created by Oubowu on 2016/9/20 3:28.
- */
 public class ActivityHelper implements Application.ActivityLifecycleCallbacks {
 
     private static Stack<Activity> mActivityStack;

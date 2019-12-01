@@ -15,14 +15,6 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 import rx.Observable;
 
-/**
- * ClassName: NewsService<p>
- * Author: oubowu<p>
- * Fuction: 请求数据服务<p>
- * CreateDate:2016/2/13 20:34<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public interface NewsService {
 
     /**

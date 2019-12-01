@@ -11,14 +11,6 @@ import java.util.Map;
 import rx.Subscription;
 import rx.functions.Func1;
 
-/**
- * ClassName: INewsDetailInteractorImpl<p>
- * Author: oubowu<p>
- * Fuction: 新闻详情的Model层接口实现<p>
- * CreateDate: 2016/2/19 21:02<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class INewsDetailInteractorImpl implements INewsDetailInteractor<NeteastNewsDetail> {
 
     @Override

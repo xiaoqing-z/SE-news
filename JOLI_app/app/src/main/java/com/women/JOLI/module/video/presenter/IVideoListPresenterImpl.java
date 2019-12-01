@@ -9,14 +9,6 @@ import com.women.JOLI.module.video.view.IVideoListView;
 
 import java.util.List;
 
-/**
- * ClassName: IVideoListPresenterImpl<p>
- * Author: oubowu<p>
- * Fuction: 视频列表代理接口实现<p>
- * CreateDate: 2016/2/23 17:09<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class IVideoListPresenterImpl extends BasePresenterImpl<IVideoListView, List<NeteastVideoSummary>> implements IVideoListPresenter {
 
     private IVideoListInteractor<List<NeteastVideoSummary>> mVideoListInteractor;

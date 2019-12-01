@@ -15,14 +15,6 @@ import com.socks.library.KLog;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * ClassName: NewsChannelAdapter<p>
- * Author: oubowu<p>
- * Fuction: 实现拖拽的逻辑的RecyclerView适配器<p>
- * CreateDate: 2016/2/20 2:12<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class NewsChannelAdapter extends BaseRecyclerAdapter<NewsChannelTable>
         implements SimpleItemTouchHelperCallback.OnMoveAndSwipeListener {
 

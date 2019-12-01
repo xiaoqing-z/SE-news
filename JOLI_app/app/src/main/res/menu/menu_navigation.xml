@@ -3,6 +3,12 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/avatar"
+            android:checked="true"
+            android:icon="@drawable/ic_loading"
+            android:title="login"/>
+
+        <item
             android:id="@+id/action_news"
             android:checked="true"
             android:icon="@drawable/ic_news_black"
@@ -12,6 +18,18 @@
             android:id="@+id/action_video"
             android:icon="@drawable/ic_ondemand_video_black"
             android:title="video"/>
+
+        <item
+            android:id="@+id/action_settings"
+            android:icon="@drawable/ic_more_black"
+            android:title="settings"/>
+
+        <item
+            android:id="@+id/action_photo"
+
+            android:title=""/>
+
+
 
     </group>
 

@@ -4,14 +4,6 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 
-/**
- * ClassName: ThemeUtil<p>
- * Author: oubowu<p>
- * Fuction: 主题根据类，提取当前主题的属性<p>
- * CreateDate: 2016/3/20 10:30<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class ThemeUtil {
 
     /**

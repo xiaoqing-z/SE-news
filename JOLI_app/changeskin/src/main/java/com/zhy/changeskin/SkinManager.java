@@ -21,9 +21,6 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by zhy on 15/9/22.
- */
 public class SkinManager
 {
     private Context mContext;

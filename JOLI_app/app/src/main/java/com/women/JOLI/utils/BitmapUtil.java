@@ -7,14 +7,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.view.View;
 
-/**
- * ClassName: BitmapUtil<p>
- * Author:oubowu<p>
- * Fuction: 图片工具类<p>
- * CreateDate:2016/2/13 18:12<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public class BitmapUtil {
 
     /**

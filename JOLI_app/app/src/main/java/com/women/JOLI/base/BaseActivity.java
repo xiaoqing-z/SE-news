@@ -3,6 +3,7 @@ package com.women.JOLI.base;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -33,7 +34,10 @@ import com.women.JOLI.annotation.ActivityFragmentInject;
 import com.women.JOLI.app.App;
 import com.women.JOLI.app.AppManager;
 import com.women.JOLI.module.news.ui.NewsActivity;
+import com.women.JOLI.module.photo.ui.PhotoActivity;
+import com.women.JOLI.module.settings.ui.SettingsActivity;
 import com.women.JOLI.module.video.ui.VideoActivity;
+import com.women.JOLI.module.login.ui.LoginActivity;
 import com.women.JOLI.utils.GlideCircleTransform;
 import com.women.JOLI.utils.GlideUtils;
 import com.women.JOLI.utils.MeasureUtil;
@@ -42,10 +46,19 @@ import com.women.JOLI.utils.SpUtil;
 import com.women.JOLI.utils.ThemeUtil;
 import com.women.JOLI.utils.ViewUtil;
 import com.socks.library.KLog;
+import com.zhy.changeskin.SkinManager;
 
 import rx.Observable;
 import rx.functions.Action1;
 
+/**
+ * ClassName: BaseActivity<p>
+ * Author:oubowu<p>
+ * Fuction: Activity的基类<p>
+ * CreateDate:2016/2/14 18:42<p>
+ * UpdateUser:<p>
+ * UpdateDate:<p>
+ */
 public abstract class BaseActivity<T extends BasePresenter> extends AppCompatActivity implements View.OnClickListener, BaseView {
 
     /**
@@ -113,7 +126,8 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
      * 跳转的类
      */
     private Class mClass;
-
+    private static int sign;
+    //SharedPreferences login = getSharedPreferences("sign", 0);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -128,6 +142,9 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
             mToolbarTitle = annotation.toolbarTitle();
             mToolbarIndicator = annotation.toolbarIndicator();
             mMenuDefaultCheckedItem = annotation.menuDefaultCheckedItem();
+
+            //SharedPreferences.Editor editor = login.edit();
+            //editor.putInt("sign", 0).commit();
         } else {
             throw new RuntimeException("Class must add annotations of ActivityFragmentInitParams.class");
         }
@@ -137,9 +154,9 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
             StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectAll().penaltyLog().build());
         }
 
-        //if (this instanceof SettingsActivity) {
-          //  SkinManager.getInstance().register(this);
-        //}
+        if (this instanceof SettingsActivity) {
+            SkinManager.getInstance().register(this);
+        }
 
         initTheme();
 
@@ -185,9 +202,9 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
     protected void onDestroy() {
         super.onDestroy();
 
-       /* if (this instanceof SettingsActivity) {
+        if (this instanceof SettingsActivity) {
             SkinManager.getInstance().unregister(this);
-        }*/
+        }
 
         if (mPresenter != null) {
             mPresenter.onDestroy();
@@ -205,7 +222,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
         super.onNewIntent(intent);
         setIntent(intent);
         if (mHasNavigationView) {
-            KLog.e("FLAG_ACTIVITY_REORDER_TO_FRONT标志位的重新排序去除跳转动画");
+            KLog.e("FLAG_ACTIVITY_REORDER_TO_FRONT Reordering of flag bits to remove jump animation");
             overridePendingTransition(0, 0);
         }
     }
@@ -290,13 +307,22 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
         mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
         if (mMenuDefaultCheckedItem != -1 && mNavigationView != null) {
             mNavigationView.setCheckedItem(mMenuDefaultCheckedItem);
+            Menu menu = mNavigationView.getMenu();
+            if(sign==0)
+                menu.findItem(R.id.avatar).setTitle("login");
+            else
+                menu.findItem(R.id.avatar).setTitle("logout");
         }
+
+
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 if (item.isChecked()) {
                     return true;
                 }
+
+
                 switch (item.getItemId()) {
                     case R.id.action_news:
                         mClass = NewsActivity.class;
@@ -304,12 +330,26 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
                     case R.id.action_video:
                         mClass = VideoActivity.class;
                         break;
-                  /*  case R.id.action_photo:
+                    case R.id.action_photo:
                         mClass = PhotoActivity.class;
                         break;
                     case R.id.action_settings:
                         mClass = SettingsActivity.class;
-                        break;*/
+                        break;
+                    case R.id.avatar:
+                        if(sign == 0)
+                        {
+                            sign =1;
+
+                            mClass = LoginActivity.class;
+                        }
+                        else {
+                            sign =0;
+
+                            mClass = NewsActivity.class;
+
+                        }
+                        break;
                 }
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
@@ -350,7 +390,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
             appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
                 @Override
                 public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                    if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT ) {//|| BaseActivity.this instanceof SettingsActivity
+                    if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT || BaseActivity.this instanceof SettingsActivity) {
                         // appBarLayout偏移量为Toolbar高度，这里为了4.4往上滑的时候由于透明状态栏Toolbar遮不住看起来难看，
                         // 根据偏移量设置透明度制造出往上滑动逐渐消失的效果
                         toolbar.setAlpha((toolbarHeight + verticalOffset) * 1.0f / toolbarHeight);
@@ -368,7 +408,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     private void handleStatusView() {
         // 针对4.4和SettingsActivity(因为要做换肤，而状态栏在5.0是设置为透明的，若不这样处理换肤时状态栏颜色不会变化)
-        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT ) {//|| this instanceof SettingsActivity
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT || this instanceof SettingsActivity) {
 
             // 生成一个状态栏大小的矩形
             View statusBarView = ViewUtil.createStatusView(this, ThemeUtil.getColor(this, R.attr.colorPrimary));
@@ -388,11 +428,11 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
             contentLayout.setClipToPadding(true);
             drawer.setFitsSystemWindows(false);
 
-           /* if (this instanceof SettingsActivity) {
+            if (this instanceof SettingsActivity) {
                 // 因为要SettingsActivity做换肤，所以statusBarView也要设置
                 statusBarView.setTag("skin:primary:background");
                 view.setTag("skin:primary:background");
-            }*/
+            }
 
         } else if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {
             // 5.0以上跟4.4统一，状态栏颜色和Toolbar的一致
@@ -418,11 +458,11 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
                         // 这个是入口新闻页面退出时发起的通知所有导航页面退出的事件
                         finish();
                         AppManager.getAppManager().clear();
-                        KLog.e("订阅事件结束：" + BaseActivity.this.getClass().getName());
+                        KLog.e("End of subscription event：" + BaseActivity.this.getClass().getName());
                     }
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
-                    KLog.e("找不到此类");
+                    KLog.e("Can't find this class");
                 }
             }
         });
@@ -486,7 +526,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
                     showActivityReorderToFront(this, AppManager.getAppManager().getLastNavActivity(), true);
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
-                    KLog.e("找不到类名啊");
+                    KLog.e("Class name not found");
                 }
                 return true;
             } else if (this instanceof NewsActivity) {

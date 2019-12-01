@@ -39,14 +39,6 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 import rx.Observable;
 
-/**
- * ClassName: RetrofitManager<p>
- * Author: oubowu<p>
- * Fuction: Retrofit请求管理类<p>
- * CreateDate:2016/2/13 20:34<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public class RetrofitManager {
 
     // 设缓存有效期为两天

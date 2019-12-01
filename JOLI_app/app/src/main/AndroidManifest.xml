@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
+        android:usesCleartextTraffic="true"
         android:name="com.women.JOLI.app.App"
         android:allowBackup="true"
         android:icon="@mipmap/launcher"
@@ -42,13 +43,25 @@
             android:theme="@style/BaseAppTheme.AppTheme">
         </activity>
         <activity
-            android:name=".module.photo.ui.PhotoActivity"
+            android:name="com.women.JOLI.module.photo.ui.PhotoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/BaseAppTheme.AppTheme">
         </activity>
         <activity
-            android:name=".module.settings.ui.SettingsActivity"
+            android:name="com.women.JOLI.module.settings.ui.SettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme.AppTheme">
+        </activity>
+        <activity
+            android:name="com.women.JOLI.module.login.ui.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme.AppTheme">
+        </activity>
+        <activity
+            android:name="com.women.JOLI.module.login.ui.SignupActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/BaseAppTheme.AppTheme">
@@ -67,13 +80,18 @@
             android:theme="@style/BaseAppTheme.AppTheme">
         </activity>
         <activity
-            android:name=".module.photo.ui.PhotoDetailActivity"
+            android:name="com.women.JOLI.module.photo.ui.PhotoDetailActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/BaseAppTheme.AppTheme">
         </activity>
         <activity
             android:name="com.women.JOLI.module.video.ui.VideoPlayActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:theme="@style/BaseAppTheme.AppTheme">
+        </activity>
+        <activity
+            android:name="com.women.JOLI.module.news.ui.NewsloginActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
             android:theme="@style/BaseAppTheme.AppTheme">
         </activity>

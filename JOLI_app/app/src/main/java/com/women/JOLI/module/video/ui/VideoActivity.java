@@ -18,14 +18,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * ClassName: VideoActivity<p>
- * Author: oubowu<p>
- * Fuction: 视频界面<p>
- * CreateDate: 2016/2/23 21:31<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 @ActivityFragmentInject(contentViewId = R.layout.activity_video,
         menuId = R.menu.menu_video,
         hasNavigationView = true,
@@ -47,12 +39,12 @@ public class VideoActivity extends BaseActivity<IVideoPresenter> implements IVid
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
         List<BaseFragment> fragments = new ArrayList<>();
-        final List<String> title = Arrays.asList("热点", "娱乐", "搞笑", "精品");
+        final List<String> title = Arrays.asList("Entertainment", "Fun");
 
-        fragments.add(VideoListFragment.newInstance(Api.VIDEO_HOT_ID, 0));
+        //fragments.add(VideoListFragment.newInstance(Api.VIDEO_HOT_ID, 0));
         fragments.add(VideoListFragment.newInstance(Api.VIDEO_ENTERTAINMENT_ID, 1));
         fragments.add(VideoListFragment.newInstance(Api.VIDEO_FUN_ID, 2));
-        fragments.add(VideoListFragment.newInstance(Api.VIDEO_CHOICE_ID, 3));
+        //fragments.add(VideoListFragment.newInstance(Api.VIDEO_CHOICE_ID, 3));
 
         BaseFragmentAdapter adapter = new BaseFragmentAdapter(getSupportFragmentManager(), fragments, title);
         viewPager.setAdapter(adapter);

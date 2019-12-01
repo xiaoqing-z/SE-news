@@ -5,14 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-/**
- * ClassName: SinaPhotoList<p>
- * Author:oubowu<p>
- * Fuction: 新浪图片列表<p>
- * CreateDate:2016/2/14 0:36<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SinaPhotoList {
 

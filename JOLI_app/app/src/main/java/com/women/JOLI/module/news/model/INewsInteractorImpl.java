@@ -20,14 +20,6 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
 import rx.schedulers.Schedulers;
 
-/**
- * ClassName: INewsInteractorImpl<p>
- * Author: oubowu<p>
- * Fuction: 新闻Model层接口实现,数据库操作，第一次初始化频道，之后查询选中的频道<p>
- * CreateDate: 2016/2/20 15:05<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class INewsInteractorImpl implements INewsInteractor<List<NewsChannelTable>> {
 
     @Override
@@ -39,7 +31,7 @@ public class INewsInteractorImpl implements INewsInteractor<List<NewsChannelTabl
 
                 final NewsChannelTableDao dao = ((App) App.getContext()).getDaoSession()
                         .getNewsChannelTableDao();
-                KLog.e("初始化了数据库了吗？ " + SpUtil.readBoolean("initDb"));
+                KLog.e("Did you initialize the database? " + SpUtil.readBoolean("initDb"));
                 if (!SpUtil.readBoolean("initDb")) {
 
                     List<String> channelName = Arrays.asList(App.getContext().getResources()
@@ -56,7 +48,7 @@ public class INewsInteractorImpl implements INewsInteractor<List<NewsChannelTabl
                         dao.insert(table);
                     }
                     SpUtil.writeBoolean("initDb", true);
-                    KLog.e("数据库初始化完毕！");
+                    KLog.e("The database is initialized!");
                 }
 
                 final Query<NewsChannelTable> build = dao.queryBuilder()

@@ -22,9 +22,6 @@ import com.women.JOLI.R;
 
 import java.io.File;
 
-/**
- * Created by Oubowu on 2016/10/15 22:17.
- */
 public class GlideUtils {
 
     /**

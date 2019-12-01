@@ -7,9 +7,6 @@ import android.text.TextUtils;
 
 import com.zhy.changeskin.utils.L;
 
-/**
- * Created by zhy on 15/9/22.
- */
 public class ResourceManager
 {
     private static final String DEFTYPE_DRAWABLE = "drawable";

@@ -10,14 +10,6 @@ import com.women.JOLI.utils.RxBus;
 import java.util.List;
 import java.util.Map;
 
-/**
- * ClassName:INewsChannelPresenterImpl <p>
- * Author: oubowu<p>
- * Fuction: 新闻频道管理代理接口实现<p>
- * CreateDate: 2016/2/20 14:02<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class INewsChannelPresenterImpl
         extends BasePresenterImpl<INewsChannelView, Map<Boolean, List<NewsChannelTable>>>
         implements INewsChannelPresenter {

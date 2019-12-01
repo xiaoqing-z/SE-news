@@ -11,14 +11,6 @@ import android.widget.TextView;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * ClassName：TextViewUtil<p>
- * Author：Oubowu<p>
- * Fuction：TextView工具类<p>
- * CreateDate：2015/7/24 10:18<p>
- * UpdateAuthor：<p>
- * UpdateDate：<p>
- */
 public class TextViewUtil {
 
     //给TextView设置部分大小

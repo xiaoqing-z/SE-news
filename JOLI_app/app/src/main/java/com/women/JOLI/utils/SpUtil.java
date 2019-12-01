@@ -6,14 +6,6 @@ import android.content.SharedPreferences;
 import com.women.JOLI.app.App;
 import com.women.JOLI.common.Constant;
 
-/**
- * ClassName：SpUtil<p>
- * Author：Oubowu<p>
- * Fuction：SharedPreferences工具<p>
- * CreateDate：2015/7/9 16:27<p>
- * UpdateAuthor：<p>
- * UpdateDate：<p>
- */
 public class SpUtil {
 
     public static String readString(String key) {

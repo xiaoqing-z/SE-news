@@ -2,9 +2,6 @@ package com.zhy.changeskin.attr;
 
 import android.view.View;
 
-/**
- * Created by zhy on 15/9/22.
- */
 public class SkinAttr
 {
     public String resName;

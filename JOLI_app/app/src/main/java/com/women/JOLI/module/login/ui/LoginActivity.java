@@ -9,6 +9,9 @@ package com.women.JOLI.module.login.ui;
 import com.women.JOLI.R;
 import com.women.JOLI.annotation.ActivityFragmentInject;
 
+
+import com.women.JOLI.module.news.ui.NewsloginActivity;
+
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +28,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 @ActivityFragmentInject(contentViewId = R.layout.activity_login,
-        menuId = R.menu.menu_settings,
+        menuId = R.menu.menu_login,
         hasNavigationView = true,
         toolbarTitle = R.string.settings,
         toolbarIndicator = R.drawable.ic_list_white,
@@ -92,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
-        String email = _emailText.getText().toString();
+                String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 
         // TODO: Implement your own authentication logic here.
@@ -105,7 +108,10 @@ public class LoginActivity extends AppCompatActivity {
                         // onLoginFailed();
                         progressDialog.dismiss();
                     }
-                }, 3000);
+                }, 1500);
+
+        Intent intent=new Intent (LoginActivity.this, NewsloginActivity.class);
+        startActivity(intent);
     }
 
 
@@ -129,7 +135,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
-        finish();
+        //finish();
+
     }
 
     public void onLoginFailed() {

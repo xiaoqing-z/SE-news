@@ -2,14 +2,6 @@ package com.women.JOLI.module.news.presenter;
 
 import com.women.JOLI.base.BasePresenter;
 
-/**
- * ClassName: INewsPresenter<p>
- * Author: oubowu<p>
- * Fuction: 新闻代理接口<p>
- * CreateDate: 2016/2/17 21:04<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public interface INewsPresenter extends BasePresenter {
 
     /**

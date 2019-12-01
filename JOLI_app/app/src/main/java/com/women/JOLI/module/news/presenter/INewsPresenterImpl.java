@@ -8,14 +8,7 @@ import com.women.JOLI.module.news.view.INewsView;
 
 import java.util.List;
 
-/**
- * ClassName: INewsPresenterImpl<p>
- * Author: oubowu<p>
- * Fuction: 新闻代理接口实现<p>
- * CreateDate: 2016/2/17 21:04<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
+
 public class INewsPresenterImpl extends BasePresenterImpl<INewsView, List<NewsChannelTable>>
         implements INewsPresenter {
 

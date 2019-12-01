@@ -13,10 +13,6 @@ import com.zhy.changeskin.ResourceManager;
 import com.zhy.changeskin.SkinManager;
 import com.zhy.changeskin.utils.L;
 
-
-/**
- * Created by zhy on 15/9/28.
- */
 public enum SkinAttrType {
     BACKGROUND("background") {
         @Override

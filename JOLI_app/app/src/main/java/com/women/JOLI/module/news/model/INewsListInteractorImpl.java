@@ -16,19 +16,11 @@ import rx.Subscription;
 import rx.functions.Func1;
 import rx.functions.Func2;
 
-/**
- * ClassName: INewsListInteractorImpl<p>
- * Author: oubowu<p>
- * Fuction: 新闻列表Model层接口实现<p>
- * CreateDate: 2016/2/17 21:02<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class INewsListInteractorImpl implements INewsListInteractor<List<NeteastNewsSummary>> {
 
     @Override
     public Subscription requestNewsList(final RequestCallback<List<NeteastNewsSummary>> callback, String type, final String id, int startPage) {
-        KLog.e("新闻列表：" + type + ";" + id);
+        KLog.e("news list：" + type + ";" + id);
         return RetrofitManager.getInstance(HostType.NETEASE_NEWS_VIDEO)
                 .getNewsListObservable(type, id, startPage)
                 .flatMap(

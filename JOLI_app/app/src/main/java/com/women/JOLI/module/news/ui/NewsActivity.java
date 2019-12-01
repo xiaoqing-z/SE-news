@@ -24,20 +24,13 @@ import java.util.List;
 import rx.Observable;
 import rx.functions.Action1;
 
-/**
- * ClassName: NewsActivity<p>
- * Author: oubowu<p>
- * Fuction: 新闻界面<p>
- * CreateDate: 2016/2/20 2:12<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 @ActivityFragmentInject(contentViewId = R.layout.activity_news,
         menuId = R.menu.menu_news,
         hasNavigationView = true,
         toolbarTitle = R.string.news,
         toolbarIndicator = R.drawable.ic_list_white,
         menuDefaultCheckedItem = R.id.action_news)
+
 public class NewsActivity extends BaseActivity<INewsPresenter> implements INewsView {
 
     private Observable<Boolean> mChannelObservable;
@@ -109,7 +102,7 @@ public class NewsActivity extends BaseActivity<INewsPresenter> implements INewsV
             setOnTabSelectEvent(viewPager, tabLayout);
 
         } else {
-            toast("数据异常");
+            toast("Data error");
         }
 
     }

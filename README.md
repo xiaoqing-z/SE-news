@@ -8,7 +8,7 @@ PROJECT PLAN
    | iteration |    plan   |
    |-----------|-----------|
    | iteration1 |news browse(untargted);watch the details of the news;video acquisition;channel management|
-   | iteration2 |user login;database construction;news screening(only for women)|
+   | iteration2 |user register and login;watch the details of video;news (only for women)|
    | iteration3 |setting;my favorite;channel management optimization|
    | final deliverables |UI optimization;final test|
 
@@ -19,7 +19,9 @@ DEVELOPER
    XIAOQING ZHANG<br>
    ZIZHEN LI<br>
    YUJIA SHI<br>
-
+   
+  
+  
 
 ENVIRONMENT
 ---------

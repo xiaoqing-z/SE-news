@@ -6,14 +6,6 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 
-/**
- * ClassName: RefreshHead
- * Author:oubowu
- * Fuction: 头部需要实现这个抽象类，以告诉UcRefreshLayout头部的状态
- * CreateDate:2016/2/11 22:56
- * UpdateUser:
- * UpdateDate:
- */
 public abstract class RefreshHead extends View {
 
     public RefreshHead(Context context) {

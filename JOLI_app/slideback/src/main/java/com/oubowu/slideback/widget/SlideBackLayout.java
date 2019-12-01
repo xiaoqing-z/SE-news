@@ -16,9 +16,6 @@ import android.widget.LinearLayout;
 import com.oubowu.slideback.SlideConfig;
 import com.oubowu.slideback.callbak.OnInternalStateListener;
 
-/**
- * Created by Oubowu on 2016/9/22 0022 15:24.
- */
 public class SlideBackLayout extends FrameLayout {
 
     private static final int MIN_FLING_VELOCITY = 400;

@@ -38,14 +38,6 @@ import com.women.JOLI.widget.refresh.RefreshLayout;
 import java.util.List;
 import java.util.Random;
 
-/**
- * ClassName: VideoListFragment<p>
- * Author: oubowu<p>
- * Fuction: 视频列表界面<p>
- * CreateDate: 2016/2/23 16:54<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 @ActivityFragmentInject(contentViewId = R.layout.fragment_video_list,
         handleRefreshLayout = true)
 public class VideoListFragment extends BaseFragment<IVideoListPresenter> implements IVideoListView {

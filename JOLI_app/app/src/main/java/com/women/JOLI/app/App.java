@@ -16,7 +16,6 @@ import com.zhy.changeskin.SkinManager;
 
 import de.greenrobot.dao.query.QueryBuilder;
 
-
 public class App extends Application {
 
     private RefWatcher mRefWatcher;

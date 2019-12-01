@@ -3,14 +3,6 @@ package com.women.JOLI.bean;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * ClassName: NeteastVideoSummary<p>
- * Author:oubowu<p>
- * Fuction: 网易视频列表<p>
- * CreateDate:2016/2/14 0:39<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class NeteastVideoSummary {
 

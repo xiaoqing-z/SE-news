@@ -22,14 +22,6 @@ import android.widget.TextView;
 
 import com.women.JOLI.widget.refresh.PacManRefreshHead;
 
-/**
- * ClassName: BaseRecyclerViewHolder<p>
- * Author:oubowu<p>
- * Fuction: RecyclerView通用适配器Holder<p>
- * CreateDate:2016/2/16 23:00<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public class BaseRecyclerViewHolder extends RecyclerView.ViewHolder {
 
     //集合类，layout里包含的View,以view的id作为key，value是view对象

@@ -14,10 +14,6 @@ import java.net.UnknownHostException;
 import retrofit2.adapter.rxjava.HttpException;
 import rx.Subscriber;
 
-/**
- * Created by Administrator on 2016/8/24 0024.
- * 把回调各个方法统一处理，并且这里对返回错误做了统一处理
- */
 public class BaseSubscriber<T> extends Subscriber<T> {
 
     private RequestCallback<T> mRequestCallback;

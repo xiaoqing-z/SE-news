@@ -5,14 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-/**
- * ClassName: WeatherInfo<p>
- * Author:oubowu<p>
- * Fuction: 天气查询信息<p>
- * CreateDate:2016/2/14 0:41<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WeatherInfo {
 

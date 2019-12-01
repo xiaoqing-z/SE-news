@@ -1,8 +1,5 @@
 package com.zhy.changeskin.constant;
 
-/**
- * Created by zhy on 15/9/22.
- */
 public class SkinConfig
 {
     public static final String PREF_NAME = "skin_plugin_pref";

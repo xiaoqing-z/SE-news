@@ -5,10 +5,6 @@ import android.content.SharedPreferences;
 
 import com.zhy.changeskin.constant.SkinConfig;
 
-
-/**
- * Created by zhy on 15/9/22.
- */
 public class PrefUtils
 {
     private Context mContext;

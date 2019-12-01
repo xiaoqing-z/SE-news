@@ -17,14 +17,6 @@ import com.women.JOLI.callback.OnLoadMoreListener;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * ClassName:
- * Author:oubowu<p>
- * Fuction: RecyclerView通用适配器<p>
- * CreateDate:2016/2/16 22:47<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseRecyclerViewHolder> {
 
     public static final int TYPE_HEADER = 1;

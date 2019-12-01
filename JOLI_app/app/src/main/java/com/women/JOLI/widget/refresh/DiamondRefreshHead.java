@@ -12,15 +12,6 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.women.JOLI.R;
 
-
-/**
- * ClassName: UcRerfreshHead<p>
- * Author:oubowu<p>
- * Fuction: 下拉刷新的头部，方块风格<p>
- * CreateDate:2016/2/9 14:05<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public class DiamondRefreshHead extends RefreshHead {
 
     // 画笔

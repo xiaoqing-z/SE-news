@@ -15,14 +15,6 @@ import android.widget.ListView;
 import com.women.JOLI.R;
 
 
-/**
- * ClassName：MeasureHelper<p>
- * Author：Oubowu<p>
- * Fuction：测量工具类<p>
- * CreateDate：2015/7/8 17:19<p>
- * UpdateAuthor：<p>
- * UpdateDate：<p>
- */
 public class MeasureHelper {
     /**
      * 获取状态栏的高度

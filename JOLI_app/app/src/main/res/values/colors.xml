@@ -17,10 +17,13 @@
     <!--配色-->
     <color name="primary">#ec407a</color>
     <color name="primary_dark">#ec4099</color>
+    <color name="primary_darker">#CC1D1D</color>
     <color name="primary_light">#B2DFDB</color>
     <color name="accent">#ff8f00</color><!--#FF5722-->
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#727272</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
     <color name="icons">#212121</color>
     <color name="divider">#B6B6B6</color>
     <color name="background_color">#E1E6EB</color>

@@ -4,14 +4,6 @@ import com.women.JOLI.callback.RequestCallback;
 
 import rx.Subscription;
 
-/**
- * ClassName: INewsChannelInteractor<p>
- * Author: oubowu<p>
- * Fuction: 新闻管理的model层接口<p>
- * CreateDate: 2016/2/20 14:03<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public interface INewsChannelInteractor<T> {
 
     /**

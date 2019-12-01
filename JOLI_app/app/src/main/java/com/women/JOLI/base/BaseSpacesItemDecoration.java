@@ -7,14 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
-/**
- * ClassName: SpacesItemDecoration<p>
- * Author: oubowu<p>
- * Fuction: RecyclerView分隔设置<p>
- * CreateDate: 2016/2/18 18:53<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class BaseSpacesItemDecoration extends RecyclerView.ItemDecoration {
 
     private int mSpace;

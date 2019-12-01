@@ -16,15 +16,6 @@ import android.view.WindowManager;
 
 import com.women.JOLI.R;
 
-
-/**
- * ClassName: PacManRefreshHead<p>
- * Author:oubowu<p>
- * Fuction: 吃豆人效果刷新头部<p>
- * CreateDate:2016/2/12 22:55<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public class PacManRefreshHead extends RefreshHead {
 
     // 画笔

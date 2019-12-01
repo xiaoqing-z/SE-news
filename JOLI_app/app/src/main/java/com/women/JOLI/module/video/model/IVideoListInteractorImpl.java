@@ -14,14 +14,6 @@ import rx.Subscription;
 import rx.functions.Func1;
 import rx.functions.Func2;
 
-/**
- * ClassName: IVideoListInteractorImpl<p>
- * Author: oubowu<p>
- * Fuction: 视频列表Model层接口实现<p>
- * CreateDate: 2016/2/23 17:10<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class IVideoListInteractorImpl implements IVideoListInteractor<List<NeteastVideoSummary>> {
 
     @Override

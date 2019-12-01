@@ -17,14 +17,6 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
 import rx.schedulers.Schedulers;
 
-/**
- * ClassName: INewsChannelInteractorImpl<p>
- * Author: oubowu<p>
- * Fuction: 新闻管理的model层接口实现类<p>
- * CreateDate: 2016/2/20 14:03<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class INewsChannelInteractorImpl
         implements INewsChannelInteractor<Map<Boolean, List<NewsChannelTable>>> {
 
@@ -41,7 +33,7 @@ public class INewsChannelInteractorImpl
 
                         if (selectState == null) {
                             // 初始化
-                            KLog.e("初始化取出选中的频道");
+                            KLog.e("Initialize the selected channel");
                             HashMap<Boolean, List<NewsChannelTable>> map = new HashMap<>();
                             map.put(true, dao.queryBuilder()
                                     .where(NewsChannelTableDao.Properties.NewsChannelSelect
@@ -61,7 +53,7 @@ public class INewsChannelInteractorImpl
                             // 因为名称是唯一的查到即更新其选中状态即可
 
                             if (selectState) {
-                                KLog.e("做增操作: " + channelName + ";" + selectState);
+                                KLog.e("Increase operation: " + channelName + ";" + selectState);
                                 // 找到它的信息
                                 final NewsChannelTable table = dao.queryBuilder()
                                         .where(NewsChannelTableDao.Properties.NewsChannelName
@@ -95,7 +87,7 @@ public class INewsChannelInteractorImpl
                                 dao.update(table);
 
                             } else {
-                                KLog.e("做删操作: " + channelName + ";" + selectState);
+                                KLog.e("Delete operation: " + channelName + ";" + selectState);
 
                                 // 找到它的信息
                                 final NewsChannelTable table = dao.queryBuilder()
@@ -197,14 +189,14 @@ public class INewsChannelInteractorImpl
 
                 if (Math.abs(fromPosition - toPosition) == 1) {
                     // 相邻的交换，只需要调整两个位置即可
-                    KLog.e("相邻的交换，只需要调整两个位置即可");
+                    KLog.e("Adjacent exchange, only need to adjust two positions.");
                     fromChannel.setNewsChannelIndex(toPosition);
                     toChannel.setNewsChannelIndex(fromPosition);
                     dao.update(fromChannel);
                     dao.update(toChannel);
                 } else if (fromPosition - toPosition > 0) {
                     //  开始的位置大于要去的位置,往前移
-                    KLog.e("开始的位置大于要去的位置,往前移");
+                    KLog.e("The starting position is larger than the position to go, moving forward");
                     final List<NewsChannelTable> moveChannels = dao.queryBuilder()
                             .where(NewsChannelTableDao.Properties.NewsChannelIndex
                                     .between(toPosition, fromPosition - 1)).build().list();
@@ -217,7 +209,7 @@ public class INewsChannelInteractorImpl
                     dao.update(fromChannel);
                 } else if (fromPosition - toPosition < 0) {
                     //  开始的位置小于要去的位置,往后移
-                    KLog.e("开始的位置小于要去的位置,往后移: " + toPosition + ";" + fromPosition);
+                    KLog.e("The starting position is smaller than the position to go, moving backwards: " + toPosition + ";" + fromPosition);
                     final List<NewsChannelTable> moveChannels = dao.queryBuilder()
                             .where(NewsChannelTableDao.Properties.NewsChannelIndex
                                     .between(fromPosition + 1, toPosition)).build().list();

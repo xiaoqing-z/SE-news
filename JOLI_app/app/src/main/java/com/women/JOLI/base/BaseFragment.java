@@ -18,14 +18,7 @@ import com.squareup.leakcanary.RefWatcher;
 import rx.Observable;
 import rx.functions.Action1;
 
-/**
- * ClassName: BaseFragment<p>
- * Author:oubowu<p>
- * Fuction: Fragment基类<p>
- * CreateDate:2016/2/14 19:52<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
+
 public abstract class BaseFragment<T extends BasePresenter> extends Fragment
         implements BaseView, View.OnClickListener {
 

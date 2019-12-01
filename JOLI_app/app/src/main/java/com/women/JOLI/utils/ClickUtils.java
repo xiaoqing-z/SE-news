@@ -5,14 +5,6 @@ import android.util.Log;
 
 import com.women.JOLI.BuildConfig;
 
-/**
- * ClassName: ClickUtils<p>
- * Author:oubowu<p>
- * Fuction: 快速点击处理类<p>
- * CreateDate:2016/2/14 13:15<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public class ClickUtils {
 
     private static final String TAG = ClickUtils.class.getSimpleName();

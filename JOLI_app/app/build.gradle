@@ -46,7 +46,7 @@ android {
                         ".apk"
             }
 //            variant.outputs.each { output ->
-//                def appName = 'JOLI'
+//                def appName = 'OuNews'
 //                def oldFile = output.outputFile
 //                def buildName = ''
 //
@@ -93,6 +93,9 @@ buildscript {
 }
 
 dependencies {
+    // Include smart login
+    //    implementation 'codelight.studios:android-smart-login:1.2'
+    //    implementation 'codelight.studios:android-smart-login:1.2'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:appcompat-v7:25.0.0'
@@ -139,4 +142,8 @@ dependencies {
     // ExoPlayer as IMediaPlayer: optional, experimental
     implementation 'tv.danmaku.ijk.media:ijkplayer-exo:0.6.2'
     implementation project(':slideback')
+    // plugin butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation files('libs/gson-2.8.5.jar')
 }

@@ -1,13 +1,5 @@
 package com.women.JOLI.bean;
 
-/**
- * ClassName: NewsChannel<p>
- * Author: oubowu<p>
- * Fuction: 频道管理的封装<p>
- * CreateDate: 2016/2/20 0:43<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class NewsChannel {
 
     /**

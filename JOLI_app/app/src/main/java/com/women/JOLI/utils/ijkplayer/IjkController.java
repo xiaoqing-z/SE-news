@@ -39,9 +39,6 @@ import java.lang.ref.WeakReference;
 
 import tv.danmaku.ijk.media.player.misc.ITrackInfo;
 
-/**
- * Created by Oubowu on 2016/9/8 0008 12:20.
- */
 public class IjkController implements IMediaController, View.OnTouchListener, View.OnClickListener, ProgressView.OnProgressChangeListener {
 
     public static final int PLAY_PROGRESS = 0;

@@ -5,9 +5,6 @@ import android.graphics.Canvas;
 import android.view.View;
 
 
-/**
- * Created by Oubowu on 2016/9/20 0020 11:19.
- */
 public class CacheDrawView extends View {
 
     private View mCacheView;

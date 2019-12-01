@@ -1,13 +1,5 @@
 package com.women.JOLI.callback;
 
-/**
- * ClassName: BaseRequestCallback<p>
- * Author:oubowu<p>
- * Fuction: 网络请求监听基类<p>
- * CreateDate:2016/2/14 1:48<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public interface RequestCallback<T> {
 
     /**

@@ -3,6 +3,8 @@ package com.women.JOLI.module.news.ui;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
@@ -10,6 +12,7 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -26,7 +29,10 @@ import com.women.JOLI.bean.SinaPhotoDetail;
 import com.women.JOLI.module.news.presenter.INewsDetailPresenter;
 import com.women.JOLI.module.news.presenter.INewsDetailPresenterImpl;
 import com.women.JOLI.module.news.view.INewsDetailView;
+import com.women.JOLI.module.photo.ui.PhotoDetailActivity;
 import com.women.JOLI.module.video.ui.VideoPlayActivity;
+import com.women.JOLI.translate.TranslateCallback;
+import com.women.JOLI.translate.TranslateUtil;
 import com.women.JOLI.utils.GlideUtils;
 import com.women.JOLI.utils.MeasureUtil;
 import com.women.JOLI.utils.ViewUtil;
@@ -36,16 +42,8 @@ import java.util.ArrayList;
 
 import zhou.widget.RichText;
 
-/**
- * ClassName: NewsDetailActivity<p>
- * Author: oubowu<p>
- * Fuction: 新闻详情界面<p>
- * CreateDate: 2016/2/20 2:12<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 @ActivityFragmentInject(contentViewId = R.layout.activity_news_detail,
-        //menuId = R.menu.menu_settings,
+        menuId = R.menu.menu_settings,
         enableSlidr = true)
 public class NewsDetailActivity extends BaseActivity<INewsDetailPresenter> implements INewsDetailView {
 
@@ -56,9 +54,16 @@ public class NewsDetailActivity extends BaseActivity<INewsDetailPresenter> imple
     private RichText mBodyTv;
 
     private FloatingActionButton mFab;
+    private FloatingActionButton mFabTranslate;
 
     private String mNewsListSrc;
     private SinaPhotoDetail mSinaPhotoDetail;
+    private String textBody = "";
+    private String textTitel = "";
+    private String TAG = "xyztest";
+    private int FLAG_TRANSLATE = 0;
+    private String textBodyTrans = "";
+    private String textTitelTrans = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +108,9 @@ public class NewsDetailActivity extends BaseActivity<INewsDetailPresenter> imple
 
         mFab = (FloatingActionButton) findViewById(R.id.fab);
         mFab.setOnClickListener(this);
+
+        mFabTranslate = (FloatingActionButton) findViewById(R.id.fab_translate);
+        mFabTranslate.setOnClickListener(this);
 
         mNewsListSrc = getIntent().getStringExtra("imgsrc");
 
@@ -202,6 +210,11 @@ public class NewsDetailActivity extends BaseActivity<INewsDetailPresenter> imple
             mBodyTv.setRichText(data.body);
         }
 
+        textTitel = (String) mTitleTv.getText();
+        textBody = data.body;
+//        Log.i(TAG, "textBody: "+textBody);
+        Log.i(TAG, "data.body: " + data.body);
+
     }
 
     /*@Override
@@ -235,13 +248,110 @@ public class NewsDetailActivity extends BaseActivity<INewsDetailPresenter> imple
                 if (mNewsImageView.getTag(R.id.img_tag) != null && !(boolean) mNewsImageView.getTag(R.id.img_tag) || mSinaPhotoDetail == null) {
                     toast("没有图片供浏览哎o(╥﹏╥)o");
                 } else {
-                    //Intent intent = new Intent(this, PhotoDetailActivity.class);
-                    //intent.putExtra("neteast", mSinaPhotoDetail);
+                    Intent intent = new Intent(this, PhotoDetailActivity.class);
+                    intent.putExtra("neteast", mSinaPhotoDetail);
                     ActivityOptionsCompat options = ActivityOptionsCompat.makeScaleUpAnimation(v, v.getWidth() / 2, v.getHeight() / 2, 0, 0);
-                    //ActivityCompat.startActivity(this, intent, options.toBundle());
+                    ActivityCompat.startActivity(this, intent, options.toBundle());
                 }
             }
         }
+
+
+        if (v.getId() == R.id.fab_translate) {
+
+            Log.i("xyztest", "onClick: FLAG_TRANSLATE:" + FLAG_TRANSLATE);
+            //首次翻译并保存
+            if (FLAG_TRANSLATE == 0) {
+
+                new TranslateUtil().translate(this, "auto", "en", textBody, translateCallback_body);
+                new TranslateUtil().translate(this, "auto", "en", textTitel, translateCallback_titel);
+                FLAG_TRANSLATE = 1;
+            }
+            //第一次翻译后点击变回源目标
+            if (FLAG_TRANSLATE == 1) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        Log.i("xyztest", "textBody: FLAG_TRANSLATE=1 :" + textBody);
+                        Log.i("xyztest", "textTitel: FLAG_TRANSLATE=1 :" + textTitel);
+
+                        Message bodyMsg = mHandler.obtainMessage();
+                        bodyMsg.what = 0;
+                        bodyMsg.obj = textBody;
+                        mHandler.sendMessage(bodyMsg);
+
+                        Message titelMsg = mHandler.obtainMessage();
+                        titelMsg.what = 1;
+                        titelMsg.obj = textTitel;
+                        mHandler.sendMessage(titelMsg);
+
+                        FLAG_TRANSLATE = 2;
+
+                    }
+                }).start();
+            }
+            //变回源目标后进行翻译
+            if (FLAG_TRANSLATE == 2) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        Log.i("xyztest", "textBody: FLAG_TRANSLATE=1 :" + textBody);
+                        Log.i("xyztest", "textTitel: FLAG_TRANSLATE=1 :" + textTitel);
+
+                        Message bodyMsg = mHandler.obtainMessage();
+                        bodyMsg.what = 0;
+                        bodyMsg.obj = textBodyTrans;
+                        mHandler.sendMessage(bodyMsg);
+
+                        Message titelMsg = mHandler.obtainMessage();
+                        titelMsg.what = 1;
+                        titelMsg.obj = textTitelTrans;
+                        mHandler.sendMessage(titelMsg);
+
+                        FLAG_TRANSLATE = 1;
+                    }
+                }).start();
+            }
+
+        }
     }
+
+    // 使用
+    TranslateCallback translateCallback_body = new TranslateCallback() {
+        @Override
+        public void onTranslateDone(String result) {
+            Log.i("xyztest", "onTranslateDonebody: " + result);
+            // result是翻译结果，在这里使用翻译结果，比如使用对话框显示翻译结果
+            mBodyTv.setRichText(result);
+            textBodyTrans = result;
+        }
+    };
+
+    // 使用
+    TranslateCallback translateCallback_titel = new TranslateCallback() {
+        @Override
+        public void onTranslateDone(String result) {
+            Log.i("xyztest", "onTranslateDonetitel: " + result);
+            // result是翻译结果，在这里使用翻译结果，比如使用对话框显示翻译结果
+            mTitleTv.setText(result);
+            textTitelTrans = result;
+        }
+    };
+
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 0:
+                    mBodyTv.setRichText((String) msg.obj);
+                    break;
+                case 1:
+                    mTitleTv.setText((String) msg.obj);
+            }
+        }
+    };
 
 }

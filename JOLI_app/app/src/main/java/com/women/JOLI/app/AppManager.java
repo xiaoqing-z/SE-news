@@ -4,7 +4,6 @@ import android.util.SparseArray;
 
 import com.socks.library.KLog;
 
-
 public class AppManager {
 
     private static volatile AppManager sInstance;

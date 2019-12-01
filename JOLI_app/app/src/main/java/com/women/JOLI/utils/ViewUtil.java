@@ -15,14 +15,6 @@ import android.widget.LinearLayout;
 
 import java.lang.reflect.Field;
 
-/**
- * ClassName: ViewUtil<p>
- * Author: oubowu<p>
- * Fuction: 处理屏幕啥的工具<p>
- * CreateDate: 2016/2/17 21:39<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 public class ViewUtil {
 
     // 隐藏状态栏

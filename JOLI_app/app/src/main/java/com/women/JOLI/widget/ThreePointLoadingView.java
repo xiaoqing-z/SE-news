@@ -13,14 +13,6 @@ import android.view.View;
 import com.women.JOLI.R;
 import com.women.JOLI.utils.MeasureUtil;
 
-/**
- * ClassName: ThreePointLoadingView<p>
- * Author:oubowu<p>
- * Fuction: 三点加载动画<p>
- * CreateDate:2016/2/11 22:56<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 public class ThreePointLoadingView extends View {
 
     // 画笔

@@ -22,14 +22,6 @@ import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 import tv.danmaku.ijk.media.player.misc.ITrackInfo;
 
-/**
- * ClassName: VideoPlayActivity<p>
- * Author: oubowu<p>
- * Fuction: 视频播放界面<p>
- * CreateDate: 2016/2/23 21:31<p>
- * UpdateUser: <p>
- * UpdateDate: <p>
- */
 @ActivityFragmentInject(contentViewId = R.layout.activity_video_play,
         enableSlidr = true)
 public class VideoPlayActivity extends BaseActivity<IVideoPlayPresenter> implements IVideoPlayView, IjkController.ITrackHolder {

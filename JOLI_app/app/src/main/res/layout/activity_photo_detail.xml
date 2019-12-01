@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.women.JOLI.module.photo.ui.PhotoDetailActivity">
+    <!--android:fitsSystemWindows="true" android:background="?attr/colorPrimary"-->
+
+    <include layout="@layout/include_status_view"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@+id/status_view"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="false"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:theme="@style/ToolbarTheme"/>
+
+    <com.women.JOLI.widget.HackyViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/material_black"/>
+
+    <zhou.widget.RichText
+        android:id="@+id/tv_photo_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/material_white"
+        tools:text="According to foreign media reports, a strange deep-sea creature resembling a dolphins like a crocodile stranded in New South Wales last week.。"/>
+
+    <!--android:background="@drawable/photo_page_bg"-->
+
+    <TextView
+        android:id="@+id/tv_photo_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/material_white"
+        tools:text="Australia found strange deep sea"/>
+
+    <TextView
+        android:id="@+id/tv_photo_detail_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_photo_detail_title"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/material_white"
+        tools:text="@string/photo_page"/>
+
+    <com.women.JOLI.widget.ThreePointLoadingView
+        android:id="@+id/tpl_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="invisible"
+        app:pointColor="?attr/pointColor"/>
+
+</RelativeLayout>

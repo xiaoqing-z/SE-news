@@ -2,10 +2,5 @@
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
       tools:context=".module.news.ui.NewsActivity">
-    <item
-        android:id="@+id/action_channel_manage"
-        android:icon="@drawable/ic_dvr_white"
-        android:orderInCategory="100"
-        android:title="channel"
-        app:showAsAction="never"/>
+
 </menu>

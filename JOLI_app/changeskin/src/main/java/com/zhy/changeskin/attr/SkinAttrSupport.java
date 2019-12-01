@@ -11,9 +11,6 @@ import com.zhy.changeskin.constant.SkinConfig;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by zhy on 15/9/23.
- */
 public class SkinAttrSupport
 {
 

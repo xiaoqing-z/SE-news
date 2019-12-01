@@ -25,9 +25,6 @@ import com.women.JOLI.utils.ijkplayer.utils.MeasureHelper;
 
 import java.text.DecimalFormat;
 
-/**
- * Created by Oubowu on 2016/8/26 0026 12:24.
- */
 public class ProgressView extends View {
 
     private Paint mPaint;

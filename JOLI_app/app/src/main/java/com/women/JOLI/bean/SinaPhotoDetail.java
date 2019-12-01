@@ -6,14 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * ClassName: SinaPhotoDetail<p>
- * Author:oubowu<p>
- * Fuction: 新浪图片详情<p>
- * CreateDate:2016/2/14 0:38<p>
- * UpdateUser:<p>
- * UpdateDate:<p>
- */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SinaPhotoDetail implements Serializable {
 

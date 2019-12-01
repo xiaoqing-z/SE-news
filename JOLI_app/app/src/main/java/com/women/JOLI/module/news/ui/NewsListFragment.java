@@ -27,6 +27,7 @@ import com.women.JOLI.common.DataLoadType;
 import com.women.JOLI.module.news.presenter.INewsListPresenter;
 import com.women.JOLI.module.news.presenter.INewsListPresenterImpl;
 import com.women.JOLI.module.news.view.INewsListView;
+import com.women.JOLI.module.photo.ui.PhotoDetailActivity;
 import com.women.JOLI.utils.ClickUtils;
 import com.women.JOLI.utils.GlideUtils;
 import com.women.JOLI.utils.MeasureUtil;
@@ -170,7 +171,7 @@ public class NewsListFragment extends BaseFragment<INewsListPresenter> implement
                 view = view.findViewById(R.id.iv_news_summary_photo);
 
                 if (mAdapter.getData().get(position).postid == null) {
-                    toast("此新闻浏览不了哎╮(╯Д╰)╭");
+                    toast("This news can't be viewed ╮(╯Д╰)╭");
                     return;
                 }
 
@@ -212,10 +213,10 @@ public class NewsListFragment extends BaseFragment<INewsListPresenter> implement
                         }
                     }
 
-                    //Intent intent = new Intent(getActivity(), PhotoDetailActivity.class);
-                    //intent.putExtra("neteast", mSinaPhotoDetail);
+                    Intent intent = new Intent(getActivity(), PhotoDetailActivity.class);
+                    intent.putExtra("neteast", mSinaPhotoDetail);
                     ActivityOptionsCompat options = ActivityOptionsCompat.makeScaleUpAnimation(view, view.getWidth() / 2, view.getHeight() / 2, 0, 0);
-                    //ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
+                    ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
 
                 }
             }
